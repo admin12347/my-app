@@ -1,0 +1,8 @@
+node{
+stage ('SCM Checkout'){
+git 'https://github.com/monalisha321/my-app.git'
+}
+stage ('Compile-Package'){
+sh 'mvn Package'
+}
+}
