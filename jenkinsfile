@@ -1,10 +1,8 @@
-node{
-stage ('SCM Checkout'){
+node {
+   echo 'Hello World'
+   stage('checkout')
+ {  
 git 'https://github.com/monalisha321/my-app.git'
 }
-stage ('Compile-Package'){
-// Get Maven home path
-def mvnHome = tool 'MAVEN_LATEST'
-sh  "${mvnHome}/bin/mvn package"
-}
+
 }
